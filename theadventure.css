@@ -1,0 +1,38 @@
+div {
+    padding-top: 200px;
+    padding-right: 100px;
+    padding-bottom: 200px;
+    padding-left: 100px;
+  }
+
+h1 {
+    text-align: center;
+}
+
+#author {
+    text-align: right; font-size: x-small;
+}
+
+#parser{
+    border-style: inset;
+}
+
+p{
+    text-align: center;
+}
+
+#deathcount{
+    text-align: right; font-size: x-small;
+}
+
+label{
+    
+    float: left;
+    clear: left;
+    width: 640px;
+    text-align: right;
+}
+input {
+  
+  float: left;
+}
