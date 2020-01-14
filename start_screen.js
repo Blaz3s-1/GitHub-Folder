@@ -5,6 +5,12 @@ var reset = 0;
 var a = 0;
 var b = 0;
 var c = 0;
+var d = 0;
+var e = 0;
+var f = 0;
+var g = 0;
+var h = 0;
+var i = 0;
 var death = 0;
 input.addEventListener("keyup", function(event) {
   var x = document.getElementById("parser").value;
@@ -52,7 +58,7 @@ input.addEventListener("keyup", function(event) {
     "You travelled West. After walking for 15 minutes, you stumble a dirt road, out stretching on both North and South direction.";
   west1 =
     "You can see the mountain range up on the North, with the top covered with snow. By the South, there is a small village that isn't so far away from where you are now.";
-  west2 = "Travel [North] / [South] / [West]";
+  west2 = "Travel [North] / [South]";
 
   //Travel down from start
   down0 =
@@ -264,6 +270,275 @@ input.addEventListener("keyup", function(event) {
     death++;
   }
 
+  //Choose rope (first time)
+  if (event.keyCode === 13 && x == "Rope" && y == 6 && c == 0) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML = "...";
+    document.getElementById("other_game_text").innerHTML = "...";
+    document.getElementById("game_text2").innerHTML =
+      "This is fucking dissapointing, you yelled, and proceed to tie the rope in a knot and...<br> Oh dear... <br> I guess I shouldn't describe what happen next, should I?";
+    document.getElementById("parser_option").innerHTML =
+      "<b>[Restart] from beginning?</b>";
+    y = 69420;
+    z++;
+    d = 1;
+    death++;
+  }
+
+  //Choose rope (second time and beyond)
+  if (event.keyCode === 13 && x == "Rope" && y == 6 && c == 1) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML = "...";
+    document.getElementById("other_game_text").innerHTML = "...";
+    document.getElementById("game_text2").innerHTML =
+      "This is fucking dissapointing, you yelled, and proceed to tie the rope in a knot and...<br> Oh dear... <br> I guess I shouldn't describe what happen next, should I?";
+    document.getElementById("parser_option").innerHTML =
+      "<b>[Restart] from beginning?</b>";
+    y = 69420;
+    death++;
+  }
+
+  //Travel to Forest
+  if (event.keyCode === 13 && x == "Forest" && y == 3) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML =
+      "You step in the Forest, with a stream flowing nearby as you travel in deeper.<br>I would not say it is as Snow White beautiful when the animals are minding their own businesses, but the scene is gourgoes enough for you to fall in love with. <br> As you traverse your way through, there is something that caught your attention...";
+    document.getElementById("other_game_text").innerHTML = "";
+    document.getElementById("parser_option").innerHTML =
+      "A stone [Ruin]! / A [Shadow] figure of some sort?";
+    y = 8;
+  }
+
+  //Choose Ruin (first time)
+  if (event.keyCode === 13 && x == "Ruin" && y == 8 && i == 0) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML =
+      "A hidden Ruin in the Forest! Who would have thought of that! (Except from the great brain like you <i>*cough cough*</i>)";
+    document.getElementById("other_game_text").innerHTML =
+      "You stepped in the ruin, with excitement fills within you. Perhaps even with the excitement, I suggest you to look around before... <br> *click* <br> ...trigger any booby trap...";
+    document.getElementById("parser_option").innerHTML =
+      "A stone door open rights in front of you, and rolling out is a giant boulder heading towards you. There is only one way to run. <br> You turn back and run, but it is too late, the boulder runs over you. It seems like your inner Indianna John does not protect you fro rolling boulder huh?<br><b>[Restart] from beginning?</b>";
+    y = 69420;
+    z++;
+    i = 1;
+    death++;
+  }
+
+  //Choose Ruin (second time)
+  if (event.keyCode === 13 && x == "Ruin" && y == 8 && i == 1) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML =
+      "A hidden Ruin in the Forest! Who would have thought of that! (Except from the great brain like you <i>*cough cough*</i>)";
+    document.getElementById("other_game_text").innerHTML =
+      "You stepped in the ruin, with excitement fills within you. Perhaps even with the excitement, I suggest you to look around before... <br> *click* <br> ...trigger any booby trap...";
+    document.getElementById("parser_option").innerHTML =
+      "A stone door open rights in front of you, and rolling out is a giant boulder heading towards you. You suddenly act out of instict, dash towards the entrance and turn left just in time as the boulder hits you. <br> Phew, so close. And with the smug grin on your face, you step back in the ruin<br>Just only to be overrun by another boulder.... Ouch<br><b>[Restart] from beginning?</b>";
+    y = 69420;
+    i = 2;
+    death++;
+  }
+
+  //Choose Ruin (third time and onward)
+  if (event.keyCode === 13 && x == "Ruin" && y == 8 && i == 2) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML =
+      "The ruin...<br> [Insert The Good, the Bad and the Ugly theme here] <br> You will not get crush by this time. Assuming that you have risin from the death for the 3rd time just to do this";
+    document.getElementById("other_game_text").innerHTML =
+      "Foot step against the stony surface, eyes gleaming to the structure, hands in akimbo stype. You are ready to strike down and claim the holy grail once and for all <br> Flash step, and you avoid the first trap <br> Duck down, and you avoid being decapited by an axe <br> Teleport to the front, and the whole floor where you have stood before collaspe";
+    document.getElementById("parser_option").innerHTML =
+      "BAM! <br>You now stood in the treasure room, gold glitters everywhere, and stand in the middle, is the holy grail. <br>This is it!<br>You reach your hand out, it's...<br>'A trap', said a mysterious voice, and the whole ruin collaspe right on you.<br>(C-B-A-G-A-E-E#-B-A-B-C-D-G-E-C-B-A-G-A-E-E#-B-A-B-C-B-G-A)<b>[Restart] from beginning?</b>";
+    y = 69420;
+    death++;
+  }
+
+  //Choose Shadow
+  if (event.keyCode === 13 && x == "Shadow" && y == 8) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML =
+      "You walk closer, with caution, of course. Sneak behind the tree, you make a peak to see who is on the opposite side.";
+    document.getElementById("other_game_text").innerHTML =
+      "?!... Couldn't that be...";
+    document.getElementById("parser_option").innerHTML =
+      "[DIO]!!! / Your archnemesis! Your great [Rival]!";
+    y = 200;
+  }
+
+  //Choose DIO
+  if (event.keyCode === 13 && x == "DIO" && y == 200 && g == 0) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML =
+      "...<br> That's it, I'm out. I'm not going to do the stupid JoJo reference thing again. I had enough of that";
+    document.getElementById("other_game_text").innerHTML =
+      "And if you want more of that, go and watch some instead of telling me about these things and yelled 'Mudadadadada' to me ever again";
+    document.getElementById("parser_option").innerHTML =
+      "To be continue?<b> Or [Restart]?</b>";
+    y = 69420;
+    z++;
+    g = 1;
+  }
+
+  //Choose DIO (second time)
+  if (event.keyCode === 13 && x == "DIO" && y == 200 && g == 1) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML = "...<br> Nope";
+    document.getElementById("other_game_text").innerHTML =
+      "Don't come closer to me";
+    document.getElementById("parser_option").innerHTML =
+      "To be continue?<b> Or [Restart]?</b>";
+    y = 69420;
+    g = 2;
+  }
+
+  //Choose DIO (final time)
+  if (event.keyCode === 13 && x == "DIO" && y == 200 && g == 2) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML =
+      "...<br> Oh ho ho. So you insist me to do this huh?";
+    document.getElementById("other_game_text").innerHTML =
+      "Good, because if I can beat the shit out off you without you getting closer to me, then you would not dare to come back to me again<br>Brace yourself!";
+    document.getElementById("parser_option").innerHTML =
+      "<b>You have been killed by the narrator. There is no continue from this point. [Restart] to continue</b>";
+    y = 69420;
+    g = 3;
+    z++;
+    death++;
+  }
+
+  //Choose DIO (onward)
+  if (event.keyCode === 13 && x == "DIO" && y == 200 && g == 3) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML = "You did not learn!";
+    document.getElementById("other_game_text").innerHTML = "";
+    document.getElementById("parser_option").innerHTML =
+      "<b>You have been killed by the narrator. There is no continue from this point. [Restart] to continue</b>";
+    y = 69420;
+    death++;
+  }
+
+  //Choose Rival
+  if (event.keyCode === 13 && x == "Rival" && y == 200) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML =
+      "You gasped. Perhaps a little too loud, causing your archnemesis to snap back and turn at you. You fell to the ground out of surprise.<br> 'So you did come back', he said, sneering.";
+    document.getElementById("other_game_text").innerHTML =
+      "You knew he was out for blood this time. The last time you have humiliate him in front of thousands of people, so no wonder he would go on the hunt for you. <br> You swipe the ground beind you to see if you can find anything good to fight. Suddunly yoy touch something cold... It's a...";
+    document.getElementById("parser_option").innerHTML =
+      "Metal [Ball] / FLEX [Tape]";
+    y = 202;
+    z++;
+  }
+
+  //Choose Ball
+  if (event.keyCode === 13 && x == "Ball" && y == 202) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML =
+      "You look at what you just hold on. It's a metal ball... No, a Pokemon ball? 'I see you got the gut to challenge me again huh?', your rival shout to you.<br> Great, you muttered to yourself, since when does this become a Pokemon battle?";
+    document.getElementById("other_game_text").innerHTML =
+      "Your opponent fish out a Poke ball from his pocket. There is no turning back now, you whispered bitterly.<br>Hold the ball firmly, you throw. ";
+    document.getElementById("parser_option").innerHTML =
+      "Lo and behold, it's a FUCKING [Charizard] X, WTF?! / [Magikarp]...";
+    y = 203;
+  }
+
+  //Choose Magikarp (first time)
+  if (event.keyCode === 13 && x == "Ball" && y == 203 && g == 0) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML =
+      "...<br>...<br>'Pathetic, isn't it?' your rival says, summoning Decidueye (please don't actually hate my boy, he's precious). Oh great, you exhale in desperation. <br> 'Use whatever you got, Magikarp', you said, hoping at least it's a tackle, not a splash";
+    document.getElementById("other_game_text").innerHTML =
+      "The Magikarp flops a few time, then unleashed A FREAKING HYPER BEAM!<br> That settles the deal as it not only vaporise the Pokemon but your rival too.<br>Normally you would be sue for killing someone intentionally but oh well, at least you got to kick someone off of your life, right?";
+    document.getElementById("parser_option").innerHTML =
+      "You have triumphant with your... Magikarp? And become the best Poke trainer in the world (sorta)<br><b>[Restart] to find more ending?</b>";
+    y = 69420;
+    z++;
+    g = 1;
+  }
+
+  //Choose Magikarp (second time and onward)
+  if (event.keyCode === 13 && x == "Ball" && y == 203 && g == 1) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML =
+      "...<br>...<br>'Pathetic, isn't it?' your rival says, summoning Decidueye (please don't actually hate my boy, he's precious). Oh great, you exhale in desperation. <br> 'Use whatever you got, Magikarp', you said, hoping at least it's a tackle, not a splash";
+    document.getElementById("other_game_text").innerHTML =
+      "The Magikarp flops a few time, then unleashed A FREAKING HYPER BEAM!<br> That settles the deal as it not only vaporise the Pokemon but your rival too.<br>Normally you would be sue for killing someone intentionally but oh well, at least you got to kick someone off of your life, right?";
+    document.getElementById("parser_option").innerHTML =
+      "You have triumphant with your... Magikarp? And become the best Poke trainer in the world (sorta)<br><b>[Restart] to find more ending?</b>";
+    y = 69420;
+  }
+
+  //Choose Charizard (first time)
+  if (event.keyCode === 13 && x == "Charizard" && y == 203 && f == 0) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML =
+      "WHAT?! WHAT?! HOLY <strike>COW</strike> MILTANK, WHAT IS THIS WORLD! WE ARE ALL GOING TO DIE BECAUSE THAT CHARIZARD IS GOING INSANE BECAUSE IT STAYED IN THAT FORM FOR YEARS AND IT LOST ITS MIND!";
+    document.getElementById("other_game_text").innerHTML =
+      "Yep. And just as expected, that Charizard went berzerk and thrashed everything including your opponent. Say goodbye to where you live and forget about funeral as your body was incinerated, stomped and smeared into pieces.";
+    document.getElementById("parser_option").innerHTML =
+      "<b>[Restart] from beginning?</b>";
+    y = 69420;
+    z++;
+    f = 1;
+    death++;
+  }
+
+  //Choose Charizard (second time and onward)
+  if (event.keyCode === 13 && x == "Charizard" && y == 203 && f == 1) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML =
+      "WHAT?! WHAT?! HOLY <strike>COW</strike> MILTANK, WHAT IS THIS WORLD! WE ARE ALL GOING TO DIE BECAUSE THAT CHARIZARD IS GOING INSANE BECAUSE IT STAYED IN THAT FORM FOR YEARS AND IT LOST ITS MIND!";
+    document.getElementById("other_game_text").innerHTML =
+      "Yep. And just as expected, that Charizard went berzerk and thrashed everything including your opponent. Say goodbye to where you live and forget about funeral as your body was incinerated, stomped and smeared into pieces.";
+    document.getElementById("parser_option").innerHTML =
+      "<b>[Restart] from beginning?</b>";
+    y = 69420;
+    death++;
+  }
+
+  //Choose Flex tape (first time)
+  if (event.keyCode === 13 && x == "Tape" && y == 202 && e == 0) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML =
+      "A roll of Flex Tape? What can it... A thought suddenly snap in your head. You grin with the thought <br> You quickly take the tape and taped around your wrist as you approach your rival.<br> 'Well well well' ";
+    document.getElementById("other_game_text").innerHTML =
+      "Your rival suddenly summon a light saber out of nowhere and slash right at you. You put your hand in defend, making sure that your wrist will intercept the light saber. <br> BOW! <br> Your hand still there, holding off the light saber. Your opponent eye widen in surprise. 'I got the high ground, Anakin', cheesy, but best badass boast of yours at the moment.<br> A swift kick , knocking the light saber off his hand and you use the Force and grab it. The tide has turned";
+    document.getElementById("parser_option").innerHTML =
+      "A decapitation on his head is enough to end the conflict. You thank the meme for making flex tape being so powerful, otherwise you would be sawed in half already. <br> And so you now become the uncontested Jedi in all parallel universe.<br> <b>[Restart] to find more ending?</b> ";
+    y = 69420;
+    z++;
+    e = 1;
+  }
+
+  //Choose Flex tape (second time and onward)
+  if (event.keyCode === 13 && x == "Tape" && y == 202 && e == 1) {
+    event.preventDefault();
+    document.getElementById("parser").value = "";
+    document.getElementById("game_text").innerHTML =
+      "A roll of Flex Tape? What can it... A thought suddenly snap in your head. You grin with the thought <br> You quickly take the tape and taped around your wrist as you approach your rival.<br> 'Well well well' ";
+    document.getElementById("other_game_text").innerHTML =
+      "Your rival suddenly summon a light saber out of nowhere and slash right at you. You put your hand in defend, making sure that your wrist will intercept the light saber. <br> BOW! <br> Your hand still there, holding off the light saber. Your opponent eye widen in surprise. 'I got the high ground, Anakin', cheesy, but best badass boast of yours at the moment.<br> A swift kick , knocking the light saber off his hand and you use the Force and grab it. The tide has turned";
+    document.getElementById("parser_option").innerHTML =
+      "A decapitation on his head is enough to end the conflict. You thank the meme for making flex tape being so powerful, otherwise you would be sawed in half already. <br> And so you now become the uncontested Jedi in all parallel universe... Again...<br><b>[Restart] to find more ending?<b> ";
+    y = 69420;
+  }
+
   //Travel West from house
   if (event.keyCode === 13 && x == "West" && y == 2) {
     event.preventDefault();
@@ -309,6 +584,7 @@ input.addEventListener("keyup", function(event) {
     event.preventDefault();
     document.getElementById("parser").value = "";
     alert("Original story by Tung N. and Duy T.");
+    alert("Assist contribution: Moumini");
     alert(
       "Concept taken from Colossal Cave (1977), Zork (1980) and in-universe Bandersnatch from Black Mirror series (2018)"
     );
